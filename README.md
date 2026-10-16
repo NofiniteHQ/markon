@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/NofiniteTechnologies/markon">
+  <a href="https://github.com/NofiniteHQ/markon">
     <img src="./markon.png" alt="Markon logo" width="100%" />
   </a>
 </p>
@@ -8,8 +8,8 @@
    <img alt="Static Badge" src="https://img.shields.io/badge/Nofinite-%23000133?style=for-the-badge&label=FROM&labelColor=slategray">
   </a>
   
-  <a href="https://github.com/NofiniteTechnologies/markon/blob/main/LICENSE">
-   <img alt="GitHub License" src="https://img.shields.io/github/license/nofinitetechnologies/markon?style=for-the-badge&labelColor=slategray&color=%23000133">
+  <a href="https://github.com/NofiniteHQ/markon/blob/main/LICENSE">
+   <img alt="GitHub License" src="https://img.shields.io/github/license/nofinitehq/markon?style=for-the-badge&labelColor=slategray&color=%23000133">
   </a>
   
   <a href="https://www.npmjs.com/package/@nofinite/markon">
@@ -17,6 +17,31 @@
   </a>
 </p>
 
+> Markon has evolved. Explore [Markon v2](https://opensource.nofinite.com/markon).
+
+## The Story Behind Markon
+
+Markon started with a simple idea: content should be structured as data, while the UI should decide how it is presented.
+
+We created Markon to make Nofinite's content JSON-based, allowing interfaces to render and present it consistently without having to write custom markup for every piece of content.
+
+We used this approach for policies, About pages, documentation, and other content-heavy pages across the Nofinite ecosystem. Over time, Markon became part of how we managed and presented content across our products.
+
+## Markon v2
+
+As our needs evolved, so did Markon.
+
+Markon v2 builds on the original idea with a more capable approach to parsing, compiling, and rendering content. Its implementation has evolved significantly while retaining the goal of making content easier to work with across applications.
+
+Development of Markon v2 now lives in the [Nofinite Stack repository](https://github.com/NofiniteHQ/stack/tree/main/packages/markon).
+
+Maintaining an existing v1 project? Continue with the documentation below.
+
+This repository preserves the original Markon v1 implementation and its history. It is no longer actively developed.
+
+---
+
+## Introduction (Markon v1)
 Markon is a lightweight JavaScript library designed for effortless content formatting in React and HTML applications. Simplify text styling tasks like bolding, adding links, lists, and line breaks with Markon, allowing developers to focus on content creation without dealing with complex formatting.
 
 ## Markon Syntax
@@ -50,7 +75,7 @@ Hello **Markon**
 
 Installation:  
 ```bash
-npm install @nofinite/markon
+npm install @nofinite/markon@1
 ```   
 
 Usage in JSX:  
@@ -59,7 +84,7 @@ import { ReactMarkon } from "@nofinite/markon";
 
 const Blog = () => {
     // Value must be a string
-    const value = "#b[Markon]#, #br#, #link[Markon, https://github.com/NofiniteTechnologies/markon]#, #list[Item 1, Item 2]#";
+    const value = "#b[Markon]#, #br#, #link[Markon, https://github.com/NofiniteHQ/markon]#, #list[Item 1, Item 2]#";
 
     // Component returns formatted content
     return <ReactMarkon content={value} />;
@@ -70,7 +95,9 @@ const Blog = () => {
 
 Installation:  
    
-Download the file: [JSMarkon.min.js](https://github.com/NofiniteTechnologies/markon/blob/main/dist/JSMarkon.min.js)   
+Download the file: [JSMarkon.min.js](https://raw.githubusercontent.com/NofiniteHQ/markon/main/dist/JSMarkon.min.js)   
+
+> Security note: JSMarkon output is rendered using innerHTML. Only use trusted content; sanitize untrusted input before rendering to prevent cross-site scripting (XSS).
 
 Usage in HTML:  
 ```HTML
@@ -83,7 +110,7 @@ Usage in HTML:
     <script src="./JSMarkon.min.js"></script>
     <script>
       // Value must be a string
-      const value = "#b[Markon]#, #br# #link[Markon, https://github.com/NofiniteTechnologies/markon]#, #list[Item 1, Item 2]#";
+      const value = "#b[Markon]#, #br# #link[Markon, https://github.com/NofiniteHQ/markon]#, #list[Item 1, Item 2]#";
 
       // Function returns formatted content
       const result = JSMarkon(value);
@@ -96,7 +123,7 @@ Usage in HTML:
 ```
 
 ## Contributors
-[Markon Contributors](https://github.com/NofiniteTechnologies/markon/graphs/contributors)
+[Markon Contributors](https://github.com/NofiniteHQ/markon/graphs/contributors)
 
 ## License
-Markon is [MIT licensed](https://github.com/NofiniteTechnologies/markon/blob/main/LICENSE)
+Markon is [MIT licensed](https://github.com/NofiniteHQ/markon/blob/main/LICENSE)
